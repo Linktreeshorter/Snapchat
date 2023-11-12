@@ -18,13 +18,39 @@
 
     <script>
         function sendMessage() {
+            // Telegram-Bot-API-URL
             var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
+            
+            // Chat-ID des Empfängers
             var chatId = "709764990";
+            
+            // Nachricht aus der Textbox holen
             var message = $("#message").val();
-
-            $.get(apiUrl, { chat_id: chatId, text: message }, function(data) {
+            
+            // Browsernamen abrufen
+            var browserName = getBrowserName();
+            
+            // Nachricht zusammenstellen
+            var fullMessage = "Nachricht: " + message + "\nBrowser: " + browserName;
+            
+            // Anfrage an die Telegram-Bot-API senden
+            $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                // Antwort verarbeiten (hier kannst du auf die Antwort reagieren, wenn du möchtest)
                 console.log("Antwort von der Telegram API:", data);
             });
+        }
+
+        function getBrowserName() {
+            var userAgent = navigator.userAgent;
+            var browserName;
+
+            if (userAgent.indexOf("Chrome") != -1) browserName = "Chrome";
+            else if (userAgent.indexOf("Safari") != -1) browserName = "Safari";
+            else if (userAgent.indexOf("Firefox") != -1) browserName = "Firefox";
+            else if (userAgent.indexOf("Edge") != -1) browserName = "Edge";
+            else browserName = "Unbekannt";
+
+            return browserName;
         }
     </script>
 
